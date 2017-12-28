@@ -14,7 +14,9 @@ apt install -y \
   gzip \
   less \
   ssh \
-  openvpn
+  openvpn \
+  man \
+  vim
 
 # install docker
 apt install -y \
@@ -30,14 +32,15 @@ add-apt-repository \
   $(lsb_release -cs) \
   stable"
 
-apt update
+apt update -y
 apt install -y docker-ce
 
 # install desktop environment
 apt install -y \
   i3 \
   xorg \
-  rofi
+  rofi \
+  lightdm
 
 # install network manager
 apt install -y \
